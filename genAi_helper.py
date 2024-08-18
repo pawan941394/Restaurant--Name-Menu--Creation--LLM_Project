@@ -1,7 +1,8 @@
 from groq import Groq
-
+import streamlit as st
 client = Groq(
-    api_key="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"
+    api_key= st.secrets['API_KEY'] # enter your api key
+   
 )
 
 completion = client.chat.completions.create(
